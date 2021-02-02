@@ -22,6 +22,15 @@ public class ListNode {
         }
     }
 
+    public ListNode append(ListNode node) {
+        ListNode temp = this;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = node;
+        return this;
+    }
+
     @Override
     public String toString() {
         return String.format("%d -> %s", this.val, this.next);
